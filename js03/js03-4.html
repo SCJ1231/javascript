@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.7/dayjs.min.js"> </script>
+    
+    <script>
+        const now = dayjs()   
+        const a = confirm(`확률게임 시작!.`)
+        let random = now.get('ms')
+        console.log(random)
+        if(random % 2){
+            document.write(`당신이 이겼습니다. 승리를 축하합니다.`)
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

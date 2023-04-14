@@ -1,0 +1,25 @@
+table td{
+    border: 2px solid black;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+}
+
+    th {
+        border: 2px solid black;
+        background-color: rgb(175, 248, 101);
+    }
+
+
+
+.a{
+    border-collapse: collapse;
+
+}
+
+.b{
+    background-color: chartreuse;
+}
+.c{
+    background-color: rgb(211, 176, 243);
+}

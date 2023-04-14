@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //prompt 로 입력되면 기본적으로 string으로 적용된다
+        //string*1 하면 숫자로 바뀐다 
+        str = '123'
+        boo = true
+        
+        console.log(`입력하신 '123' 값은 string타입 입니다.`)
+        console.log(`이 타입을 Number()를 사용하여 숫자로 변환 하겠습니다.` )
+        console.log(Number(str), typeof Number(str) )
+        console.log(`이제 위 숫자 타입을 Boolean()를 사용하여 불리언으로 변환 하겠습니다.`)
+        console.log(`위 값 123(타입:number)을 불리언 타입으로 변환하면 이렇게 됩니다.`)
+        console.log(Boolean(str), typeof Boolean(str))
+        console.log(String(boo), typeof String(boo))
+        console.log(Number(boo), typeof Number(boo))
+        console.log(boo*1, typeof !!boo)
+        console.log(!!str, typeof str+"")
+        console.log(!!str, typeof boo*1)
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

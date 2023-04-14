@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const a = prompt(`점수를 입력하세요`, `숫자만 입력하세요.`)
+        if(a === 100) {
+            alert(`A++입니다.`)
+            console.log(`A++입니다.`)
+            document.write(`<h3>A++입니다.</h3>`)
+        }
+        else if(a<100 && a>90){
+            alert(`A입니다.`)
+            console.log(`A입니다.`)
+            document.write(`<h3>A입니다.</h3>`)
+        }
+        if(80<=a && a<90){
+            alert(`B입니다.`)
+            console.log(`B입니다.`)
+            document.write(`<h3>B입니다.</h3>`)
+        }
+        else if(a>=70 && a<80){
+            alert(`C입니다.`)
+            console.log(`C입니다.`)
+            document.write(`<h3>C입니다.</h3>`)
+        }
+        if(60<=a && a<70){
+            alert(`D입니다.`);
+            console.log(`D입니다.`);
+            document.write(`<h3>D입니다.</h3>`)
+        }
+        else if(100>a && 60>a){
+            alert(`F입니다.`)
+            console.log(`F입니다.`)
+            document.write(`<h3>F입니다.</h3>`)
+        }
+document.write
+let list = ``
+    list += `<table><tr><th>이름</th><th>점수</th><th>결과</th></tr><tr><td>손창준</td><td>${a}</td><td>'F입니다'</td></tr></table>`     
+    document.write(list)
+    </script>
+    <style>
+        table td { 
+            border: 2px solid black;
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            border-collapse: collapse;
+            
+        }
+         tr th{
+            border: 2px solid black;
+            width: 300px;
+            height: 50px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+   
+</body>
+</html>
