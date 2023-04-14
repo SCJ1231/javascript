@@ -1,0 +1,20 @@
+table td {
+    border: 1px solid black;
+    text-align: center;
+    width: 500px;
+}
+th {
+    border: 1px solid black;
+}
+.a {
+    border-collapse: collapse;
+}
+.b{
+    background-color: aquamarine;
+}
+div{
+    border: 3px groove greenyellow;
+    width: auto;
+    height: auto;
+    padding: 50px;
+}
