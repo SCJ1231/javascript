@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    
+    
+    <script>
+        let money = prompt('금액을 입력하세요.','10000원')
+            console.log(`입력한 금액 ${money}`) 
+        let fiftyThousend = Math.floor(money / 50000);
+            console.log(`${fiftyThousend}`)
+       let tenThousend = Math.floor((money - fiftyThousend * 50000) / 10000);
+            console.log(`${tenThousend}`)
+        let fiveThousend = Math.floor((money - fiftyThousend * 50000 - tenThousend * 10000) / 5000);  
+            console.log(`${fiveThousend}`)
+        let oneThousend = Math.floor((money - fiftyThousend * 50000 - tenThousend * 10000 - fiveThousend * 5000) / 1000);
+            console.log(`${oneThousend}`)
+        let fiveHundred = Math.floor((money - fiftyThousend * 50000 - tenThousend * 10000 - fiveThousend * 5000 - oneThousend * 1000) / 500);
+            console.log(`${fiveHundred}`)
+        let oneHundred = Math.floor((money - fiftyThousend * 50000 - tenThousend * 10000 - fiveThousend * 5000 - oneThousend * 1000 - fiveHundred * 500) / 100); 
+            console.log(`${oneHundred}`)
+        let fifty = Math.floor((money - fiftyThousend * 50000 - tenThousend * 10000 - fiveThousend * 5000 - oneThousend * 1000 - fiveHundred * 500 - oneHundred * 100) / 50);
+            console.log(`${fifty}`)
+        let ten = Math.floor((money - fiftyThousend * 50000 - tenThousend * 10000 - fiveThousend * 5000 - oneThousend * 1000 - fiveHundred * 500 - oneHundred * 100 - fifty * 50) / 10);
+            console.log(`${ten}`)
+
+
+            let list = ``
+    list+=`<table>`
+    list+=`<tr class="a">`
+    list+=`<th colspan="2">변경하신 금액 ${money}원</th></tr>`
+    list+=`<tr><td>5만원권</td>`
+    list+=`<td>${fiftyThousend}장</td></tr>`
+    list+=`<tr><td>1만원권</td>`
+    list+=`<td>${tenThousend}장</td></tr>`
+    list+=`<tr><td>5천원권</td>`
+    list+=`<td>${fiveThousend}장</td></tr>`
+    list+=`<tr><td>1천원권</td>`
+    list+=`<td>${oneThousend}장</td></tr>`
+    list+=`<tr><td>5백원</td>`
+    list+=`<td>${fiveHundred}개</td></tr>`
+    list+=`<tr><td>1백원</td>`
+    list+=`<td>${oneHundred}개</td></tr>`
+    list+=`<tr><td>50원</td>`
+    list+=`<td>${fifty}개</td></tr>`
+    list+=`<tr><td>10원</td>`
+    list+=`<td>${ten}개</td></tr>`
+    list+=`</table>`
+    document.write(list)
+
+    </script>
+
+    <style>
+table td {
+    border: 1px solid black;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    border-collapse: collapse;
+}
+tr th {
+    border: 1px solid black;
+    width: 200px;
+    height: 50px;
+    border-collapse: collapse;
+    
+}
+
+.a{
+    background-color: aquamarine;
+    
+}
+
+
+    </style>
+</head>
+<body>
+   
+</body>
+</html>
