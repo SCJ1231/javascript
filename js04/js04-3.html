@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p 165(splice)</title>
+    <script>
+        const arr =[11,22,33,44,55,66,77]
+        //console.log(arr)
+        //console.log(arr.push(88))
+        //push는 중간에 넣어도 먼저 계산해서 보여준다.
+        //배열안에 있는 요소의 갯수를 보여준다.
+
+
+        /* 선입선출 */
+        //const a1 = arr.shift()
+        //console.log(a1)
+        //console.log(arr)
+        //arr.push(11)
+        //console.log(arr)
+        //shift 는 push가 중간에 들어와도 먼저 계산하지 않도록 해준다. 선입선출
+
+
+        /* 후입선출 */
+        //console.log(arr)
+        //const last = arr.pop()
+        //console.log(last)
+        //console.log(arr)
+        //맨뒤에 있는것부터 순서대로 표시해준다.
+
+
+        /* 접합: arr.splice('시작','갯수') */
+        console.log(arr)
+        const a1 =arr.splice(arr.length-3)
+        //const a1 =arr.splice(0,1)
+        console.log(a1)
+        console.log(arr)
+        //시작과 끝에 있는 요소를 꺼내온다.
+        //일반적인 숫자, length도 사용가능하다. -> 차례대로
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤</title>
+    <script>
+        Math.random()
+        const ran = Math.floor(Math.random()*100)
+        console.log(ran)
+        //10% 넘어가면 일반 -> 회색
+        //5~10% 레어템 -> 노란색
+        //2~5% 유니크 -> 초록
+        //2%미만 레전드 아이템 당첨 -> 금색
+
+        if(10 <  ran && ran <= 100){
+        console.log(`%c일반 아이템`, "font-size:5px;color:gray;")};
+        if(5 <= ran && ran< 10){
+        console.log(`%c레어 아이템`, "font-size:10px;color:yellow")};
+        if(2 <= ran && ran < 5){
+        console.log(`%c유니크 아이템`, "font-size:20px;color:green;")};
+        if(2 > ran){
+        console.log(`%c레전드 아이템 당첨!!!`, "font-size:30px;color:red;")};
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

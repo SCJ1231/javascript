@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //딸기 바나나 사과 수박 배 키위 복숭아 포도 
+        
+        const bag = ['딸기','바나나','사과','수박','배','키위','복숭아','포도']
+        console.log(bag)
+        const fruits = prompt(`${bag} 중 제거하고 싶은 품목을 입력하세요.`)
+        const fruits2 = prompt(`${bag} 외에 추가하고 싶은 품목을 입력하세요.`)
+        console.log(bag.splice(bag.indexOf(fruits),1))
+        console.log(bag.splice(bag.length-2,0,fruits2))
+        document.write(`<h2>요청하신 ${fruits} 을 제거한 품목은 ${bag} 입니다.</h2>`)
+        console.log(bag)
+            
+        //배열.splice(인덱스, 0, 요소) -> 요소추가 
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
