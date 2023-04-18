@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문(배열2)</title>
+    <link rel="stylesheet" href="./css/js05-3.css">
+    <script>
+        const arr = ['강아지','고양이','코끼리','원숭이','호랑이','거북이','토끼']
+        const input = prompt(`${arr} 중 제외할 동물을 입력하세요.`)
+        for(let i=0;i<arr.length;i++){
+            console.log(i,arr[i])
+            //if(i==3)break; -> 3번째인 원숭이에서 멈춘다. 
+            if(arr[i]==input){break}
+            //input에 들어있는것은 문자이므로 i(숫자)랑 비교하면 안된다.
+            //같은 문자인 arr에 비교를 하는데 arr이 가진 인덱스(i)와 비교 하여야된다. -> arr[1] 로 입력 
+            document.write(`<h1>${arr}중에 <br> </h1>`) 
+            document.write(`<h2>${arr[i]}</h2>`)
+
+        }
+        
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
