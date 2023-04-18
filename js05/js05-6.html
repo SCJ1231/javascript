@@ -7,11 +7,11 @@
     <title>p 189</title>
     <script>
         let output = ''
-        for(let i = 1; i < 15; i++){
-            for(let j = 15; j > i; j--){
+        for(let i = 1; i < 15; i++){     // -> 표시되는 줄(칸수)(큰틀)
+            for(let j = 15; j > i; j--){ // -> 공백 
                 output += ' '
             }
-            for(let k = 0; k < 2 * i - 1; k++){
+            for(let k = 0; k < 2 * i - 1; k++){ //->표시되는 별
                 output += '*'
             }
             output += '\n'

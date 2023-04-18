@@ -8,12 +8,12 @@
     <script>
         let output = ''
         for(let i =1; i<10; i++){
-            for(let j =9; j>i; j--){
+            for(let j = 10; j>i; j--){
                 output +='*'
             }
             output += '\n'
         }
-        console.log(output)
+        console.log(`%c${output}`, "font-size:30px;background-color:gold;color:green;")
         //안에 있는 시작점을 크게주고 줄어드는 공식으로 만든다.
 
     </script>
