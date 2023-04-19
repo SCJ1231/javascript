@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>눈치게임</title>
+    
+    <script> 
+    //랜덤으로 임의의 수를 뽑기 0~100까지   
+    //내가 입력한 수 보다 큰지 작은지 나타내기
+    //반복적으로 풀어가다가 5회가 넘어가면 게임오버(정답 보여주기)
+    //맞추면 성공축하 메세지(정답 보여주기) 
+    
+       const randomNumber = Math.floor(Math.random()*100) 
+        for(let i =0; i<5; i++){
+            const num = prompt('0~100까지 중에 임의의 수를 정해주세요.'+randomNumber)*1
+            if(num>randomNumber){
+                alert('선택한 숫자보다 작습니다. 다른숫자를 선택해주세요')
+                console.log('선택한 숫자보다 작습니다.')
+            }
+            if(num<randomNumber){
+                alert('선택한 숫자보다 큽니다. 다른숫자를 선택해주세요.')
+                console.log('선택한 숫자보다 큽니다.')
+            }
+        
+            else if(num==randomNumber (alert('정답입니다!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'))){
+            break
+            console.log('맞추셨습니다.')} 
+            
+             if(i===4){
+                alert('게임오버 ㅠㅠ;;')
+                console.log('게임오버..')
+            
+        }}
+        console.log(randomNumber)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

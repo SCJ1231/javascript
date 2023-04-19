@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위 바위 보 게임</title>
+    <script>
+        //가위 바위 보 중에 하나를 입력받아서 게임을 한다
+        //이기면 승 비기면 비김 지면 졌다고 표현
+        //게임하는 동안 승률을 표기할 것. 3:1 로 표현하면서 75% 승리 
+        
+        const random = Math.floor(Math.random()*3)
+        console.log(random)
+        const arr = ['가위','바위','보']
+        //console.log(arr[random])
+
+        while(true){
+            const input = prompt(`중 하나를 선택하세요`)*1
+            console.log(input)
+            if(arr[0]&&random || arr[1]&&random || arr[2]&&random){
+                alert('비겼습니다.')
+            }
+            if(arr[0]){
+                if(arr[0] < random){
+                    alert('졌습니다.')
+                }
+                if(arr[0] > random){
+                    alert('이겼습니다.')
+                }
+            }
+            if(arr[1]){
+                if(arr[1] > random){
+                    alert('이겼습니다.')
+                }
+                if(arr[1] < random){
+                    alert('졌습니다.')
+                }
+            }
+            if(arr[2]){
+                if(arr[2] < random){
+                    alert('졌습니다.')
+                }
+                if(arr[2] > random){
+                    alert('이겼습니다')
+                }
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+         //   for(let i = arr;  ;i++){
+         //   const input = prompt(`중 하나를 선택하세요`)*1
+         //   console.log(input)
+         //   if(random<input){
+         //       prompt('승리하셨습니다.')
+         //       console.log('승리')
+         //  }
+         //  if(random==input){
+         //       prompt('비겼습니다.')
+         //       console.log('비김')
+         //  }
+         //  if(random>input){
+         //       prompt('패배하셨습니다.')
+         //       console.log('패배')
+         //  }break
+         //   
+         //  }
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
