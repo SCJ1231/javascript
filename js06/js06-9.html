@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/9.css">
+    <script>
+//10만 번을 주사위를 던져서
+//1에서 6까지 몇 번 나오는지 기록하고
+//통계를 내고 검증하기 각각의 횟수의 합이 100만이 되는지 역으로 확인
+
+// 상자 갯수를 저장하는 상자
+let a=b=c=d=e=f=0
+
+for(let i = 0; i<1000000; i++){
+   // const arr =prompt('고정값을 정해주세요.')*1
+           const ran = Math.floor(Math.random()*6)+1
+           if(ran==1){a++}
+           if(ran==2){b++}
+           if(ran==3){c++}
+           if(ran==4){d++}
+           if(ran==5){e++}
+           if(ran==6){f++} 
+        }
+        console.log(a)
+        console.log(b)
+        console.log(c)
+        console.log(d)
+        console.log(e)
+        console.log(f)
+        console.log(a+b+c+d+e+f)
+
+
+        let arr1 = (a++/1000000)*100 
+        let arr2 = (b++/1000000)*100
+        let arr3 = (c++/1000000)*100
+        let arr4 = (d++/1000000)*100
+        let arr5 = (e++/1000000)*100
+        let arr6 = (f++/1000000)*100
+
+        console.log(arr1)
+        console.log(arr2)
+        console.log(arr3)
+        console.log(arr4)
+        console.log(arr5)
+        console.log(arr6)
+
+
+        let list = ``
+            list+=`<table>`
+                list+=`<tr class="a"><th>주사위 번호</th><th>나온 횟수</th><th>확률</th></tr>`
+                list+=`<tr><td>1</td><td>${a}</td><td>${arr1}</td></tr>`
+                list+=`<tr><td>2</td><td>${b}</td><td>${arr2}</td></tr>`
+                list+=`<tr><td>3</td><td>${c}</td><td>${arr3}</td></tr>`
+                list+=`<tr><td>4</td><td>${d}</td><td>${arr4}</td></tr>`
+                list+=`<tr><td>5</td><td>${e}</td><td>${arr5}</td></tr>`
+                list+=`<tr><td>6</td><td>${f}</td><td>${arr6}</td></tr>`
+                list+=`</table>`
+                document.write(list)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
