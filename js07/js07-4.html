@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //1에서 45까지의 수중 랜덤하게 3개를 뽑아 배열에 넣으시오.
+      //위에서 뽑은 세가지의 수를 본인이 만든 알고리즘으로 번호를 오름차순 순서대로 나열하여라.
+      //반목문, 제어문, 배열 사용  for, if, array
+      //3개를 뽑을때 중복이 안되게
+      const arr = [];
+      let temp;
+      //const index = arr.indexOf();
+      for (let i = 0; i < 3; i++) {
+        let ran = Math.floor(Math.random()*45)+1
+        // const ran = [5, 4, 3, 3, 2, 1];
+        while(true){
+            if(arr.indexOf(ran)==-1){
+            arr[i] = ran;
+            break;
+            } else {
+                ran = Math.floor(Math.random()*45)+1
+            }
+        }
+      }
+
+      for (let i = 0; i < 100; i++) {
+        if (arr[0] < arr[1] && arr[1] < arr[2]) break;
+        if (arr[0] > arr[1]) {
+          temp = arr[0];
+          arr[0] = arr[1];
+          arr[1] = temp;
+        }
+        if (arr[1] > arr[2]) {
+          temp = arr[1];
+          arr[1] = arr[2];
+          arr[2] = temp;
+        }
+        
+      }
+      
+
+      console.log(arr);
+    </script>
+  </head>
+  <body></body>
+</html>

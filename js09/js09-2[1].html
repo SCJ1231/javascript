@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1~45까지 임의의 수 6자리를 중복없이 뽑아 차례로 나열하여 배열에다가 그 값을 넣으시오.
+        //위의 배열을 10000개 준비하여 각 번호별로 나온 수를 카운팅 하라.
+        
+        const count = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                        0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                        0,0,0,0,0] //-> 45개
+        let total = 0;
+        let arr = []
+        function lotto(){
+            arr = []
+            for(let i=0;i<6;i++){
+                let ran = Math.floor(Math.random()*45)+1
+                while(true){
+                    if(arr.indexOf(ran)===-1){
+                    arr[i]=ran
+                    break;
+                    } else {
+                    ran = Math.floor(Math.random()*45)+1
+                    }
+                }
+            }
+            console.log(arr.sort((a,b)=>(a-b)))
+        }
+        for(let i=0;i<5;i++){
+            //console.log(i+1)
+            lotto()
+            for(let j=0;j<6;j++){
+                for(let k=0;k<count.length;k++){
+                    if(k+1===arr[j]){
+                        count[k]+=1
+                        //console.log(j+1,count[j])
+                        total+=1
+                    }
+                }
+            }   
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

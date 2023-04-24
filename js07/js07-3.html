@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/3.css" />
+    <script>
+      const arr = prompt("현재의 온도를 입력해주세요.");
+      let aa = "정상온도를 벗어났습니다.";
+      let bb = "시원하네요";
+      let cc = "보통이에요.";
+      let dd = "갑갑하네요.";
+      let ee = "정상온도를 벗어났습니다.";
+      if (arr < 16) {
+        document.write(
+          `<table>
+      <tr>
+      <th colspan="6">16미만</th>
+      <th colspan="4">16이상~22미만</th>
+      <th colspan="4">22이상~28미만</th>
+      <th colspan="3">28이상~32미만</th>
+      <th colspan="6">32이상</td></th>
+      <tr>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="d"></td>
+      <td class="d"></td>
+      <td class="d"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td></tr>
+      <tr>
+      <td colspan="6">${aa}</td>
+      <td colspan="4"></td>
+      <td colspan="4"></td>
+      <td colspan="3"></td>
+      <td colspan="6"></td></tr>
+      </table><h3>지금 온도는 ${arr} 이며, ${aa}</h3>`
+        );
+      } else if (arr >= 16 && arr < 22) {
+        document.write(`<table>
+      <tr>
+      <th colspan="6">16미만</th>
+      <th colspan="4">16이상~22미만</th>
+      <th colspan="4">22이상~28미만</th>
+      <th colspan="3">28이상~32미만</th>
+      <th colspan="6">32이상</td></th>
+      <tr>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="d"></td>
+      <td class="d"></td>
+      <td class="d"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td></tr>
+      <tr>
+      <td colspan="6"></td>
+      <td colspan="4">${bb}</td>
+      <td colspan="4"></td>
+      <td colspan="3"></td>
+      <td colspan="6"></td></tr>
+      </table><h3>지금 온도는 ${arr} 이며, ${bb}</h3>`);
+      } else if (arr >= 22 && arr < 28) {
+        document.write(`<table>
+      <tr>
+      <th colspan="6">16미만</th>
+      <th colspan="4">16이상~22미만</th>
+      <th colspan="4">22이상~28미만</th>
+      <th colspan="3">28이상~32미만</th>
+      <th colspan="6">32이상</td></th>
+      <tr>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="d"></td>
+      <td class="d"></td>
+      <td class="d"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td></tr>
+      <tr>
+      <td colspan="6"></td>
+      <td colspan="4"></td>
+      <td colspan="4">${cc}</td>
+      <td colspan="3"></td>
+      <td colspan="6"></td></tr>
+      </table><h3>지금 온도는 ${arr} 이며, ${cc}</h3>`);
+      } else if (arr >= 28 && arr < 32) {
+        document.write(`<table>
+      <tr>
+      <th colspan="6">16미만</th>
+      <th colspan="4">16이상~22미만</th>
+      <th colspan="4">22이상~28미만</th>
+      <th colspan="3">28이상~32미만</th>
+      <th colspan="6">32이상</td></th>
+      <tr>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="d"></td>
+      <td class="d"></td>
+      <td class="d"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td></tr>
+      <tr>
+      <td colspan="6"></td>
+      <td colspan="4"></td>
+      <td colspan="4"></td>
+      <td colspan="3">${dd}</td>
+      <td colspan="6"></td></tr>
+      </table><h3>지금 온도는 ${arr} 이며, ${dd}</h3>`);
+      } else if (arr >= 32) {
+        document.write(`<table>
+      <tr>
+      <th colspan="6">16미만</th>
+      <th colspan="4">16이상~22미만</th>
+      <th colspan="4">22이상~28미만</th>
+      <th colspan="3">28이상~32미만</th>
+      <th colspan="6">32이상</td></th>
+      <tr>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="a"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="b"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="c"></td>
+      <td class="d"></td>
+      <td class="d"></td>
+      <td class="d"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td>
+      <td class="e"></td></tr>
+      <tr>
+      <td colspan="6"></td>
+      <td colspan="4"></td>
+      <td colspan="4"></td>
+      <td colspan="3"></td>
+      <td colspan="6">${ee}</td></tr>
+      </table><h3>지금 온도는 ${arr} 이며, ${ee}}</h3>`);
+      }
+
+    //   document.write(`
+    //         <table>
+    //   <tr>
+    //   <th colspan="6">16미만</th>
+    //   <th colspan="4">16이상~22미만</th>
+    //   <th colspan="4">22이상~28미만</th>
+    //   <th colspan="3">28이상~32미만</th>
+    //   <th colspan="6">32이상</td></th>
+    //   <tr>
+    //   <td class="a"></td>
+    //   <td class="a"></td>
+    //   <td class="a"></td>
+    //   <td class="a"></td>
+    //   <td class="a"></td>
+    //   <td class="a"></td>
+    //   <td class="b"></td>
+    //   <td class="b"></td>
+    //   <td class="b"></td>
+    //   <td class="b"></td>
+    //   <td class="c"></td>
+    //   <td class="c"></td>
+    //   <td class="c"></td>
+    //   <td class="c"></td>
+    //   <td class="d"></td>
+    //   <td class="d"></td>
+    //   <td class="d"></td>
+    //   <td class="e"></td>
+    //   <td class="e"></td>
+    //   <td class="e"></td>
+    //   <td class="e"></td>
+    //   <td class="e"></td>
+    //   <td class="e"></td></tr>
+    //   <tr>
+    //   <td colspan="6">정상온도를 벗어났습니다.</td>
+    //   <td colspan="4">시원하네요</td>
+    //   <td colspan="4">보통이에요</td>
+    //   <td colspan="3">갑갑하네요</td>
+    //   <td colspan="6">정상온도를 벗어났습니다.</td></tr>
+    //   </table>`)
+
+      document.write(list);
+    </script>
+  </head>
+  <body></body>
+</html>

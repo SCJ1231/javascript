@@ -1,0 +1,45 @@
+table {
+    border-collapse: collapse;
+}
+tr td {
+    
+    width: 300px;
+    text-align: center;
+    font-size: 18px;
+   
+
+}
+tr, td,th {
+    border: 1px solid black;
+   
+    text-align: center;
+}
+.a .b .c .d .e{
+    border-collapse: collapse;
+}
+.a{
+    background-color: purple;
+    height: 25px;
+   
+}
+.b{
+    background-color: blue;
+    
+}
+.c{
+    background-color: gold;
+    
+}
+.d{
+    background-color: chocolate;
+    
+}
+.e{
+    background-color: red;
+    
+}
+body{
+    background-image: url(https://www.greenpostkorea.co.kr/news/photo/201909/109347_107771_4332.jpg);
+}
+
+  
