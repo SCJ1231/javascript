@@ -1,0 +1,22 @@
+table td{
+    border: 1px solid black;
+    width: 150px;
+    /* border-collapse: collapse; */
+    text-align: center;
+}
+tr th td {
+    border: 1px solid black;
+
+}
+.a{
+    background-color: aqua;
+}
+.b{
+    background-color: lightpink;
+}
+.c{
+    background-color: red;
+}
+h3{
+    background-color: gold;
+}

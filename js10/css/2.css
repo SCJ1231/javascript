@@ -1,0 +1,22 @@
+html, heads{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+
+table {
+    
+    border-collapse: collapse;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(186, 226, 253);
+    
+}
+tr, td{
+    /* border: 1px solid black; */
+}
+.a{
+    border-bottom: 1px solid black;
+}

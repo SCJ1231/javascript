@@ -4,282 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/2.css">
+    <title>로또 for문 이용</title>
     <script>
         //1~45까지 임의의 수 6자리를 중복없이 뽑아 차례로 나열하여 배열에다가 그 값을 넣으시오.
         //위의 배열을 10000개 준비하여 각 번호별로 나온 수를 카운팅 하라.
-
-        let a1=a2=a3=a4=a5=a6=a7=a8=a9=a10=a11=a12=a13=a14=a15=a16
-        =a17=a18=a19=a20=a21=a22=a23=a24=a25=a26=a27=a28=a29=a30=
-        a31=a32=a33=a34=a35=a36=a37=a38=a39=a40=a41=a42=a43=a44=a45=0
         
-        
+        const count = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                        0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                        0,0,0,0,0] //-> 45개
+        let total = 0;
+        let arr = []
         function lotto(){
-            const arr = []
-            
-            
-            while(arr.length<6){
-                const ran = Math.floor(Math.random()*45+1)
-                if(!arr.includes(ran))arr.push(ran)
-                if(ran==1){a1++}
-                if(ran==2){a2++}
-                if(ran==3){a3++}
-                if(ran==4){a4++}
-                if(ran==5){a5++}
-                if(ran==6){a6++}
-                if(ran==7){a7++}
-                if(ran==8){a8++}
-                if(ran==9){a9++}
-                if(ran==10){a10++}
-                if(ran==11){a11++}
-                if(ran==12){a12++}
-                if(ran==13){a13++}
-                if(ran==14){a14++}
-                if(ran==15){a15++}
-                if(ran==16){a16++}
-                if(ran==17){a17++}
-                if(ran==18){a18++}
-                if(ran==19){a19++}
-                if(ran==20){a20++}
-                if(ran==21){a21++}
-                if(ran==22){a22++}
-                if(ran==23){a23++}
-                if(ran==24){a24++}
-                if(ran==25){a25++}
-                if(ran==26){a26++}
-                if(ran==27){a27++}
-                if(ran==28){a28++}
-                if(ran==29){a29++}
-                if(ran==30){a30++}
-                if(ran==31){a31++}
-                if(ran==32){a32++}
-                if(ran==33){a33++}
-                if(ran==34){a34++}
-                if(ran==35){a35++}
-                if(ran==36){a36++}
-                if(ran==37){a37++}
-                if(ran==38){a38++}
-                if(ran==39){a39++}
-                if(ran==40){a40++}
-                if(ran==41){a41++}
-                if(ran==42){a42++}
-                if(ran==43){a43++}
-                if(ran==44){a44++}
-                if(ran==45){a45++}
-                
+            arr = []
+            for(let i=0;i<6;i++){
+                let ran = Math.floor(Math.random()*45)+1
+                while(true){
+                    if(arr.indexOf(ran)===-1){
+                    arr[i]=ran
+                    break;
+                    } else {
+                    ran = Math.floor(Math.random()*45)+1
+                    }
+                }
             }
-            
             console.log(arr.sort((a,b)=>(a-b)))
         }
-        
-        for(let i = 0; i<1000; i++){
-            lotto() 
-            
+        for(let i=0;i<5;i++){
+            //console.log(i+1)
+            lotto()
+            for(let j=0;j<6;j++){
+                for(let k=0;k<count.length;k++){
+                    if(k+1===arr[j]){
+                        count[k]+=1
+                        //console.log(j+1,count[j])
+                        total+=1
+                    }
+                }
+            }   
         }
-        
-        console.log(`1이나온횟수${a1}`)
-        console.log(`2가나온횟수${a2}`)
-        console.log(`3이나온횟수${a3}`)
-        console.log(`4가나온횟수${a4}`)
-        console.log(`5가나온횟수${a5}`)
-        console.log(`6이나온횟수${a6}`)
-        console.log(`7이나온횟수${a7}`)
-        console.log(`8이나온횟수${a8}`)
-        console.log(`9가나온횟수${a9}`)
-        console.log(`10이나온횟수${a10}`)
-        console.log(`11이나온횟수${a11}`)
-        console.log(`12가나온횟수${a12}`)
-        console.log(`13이나온횟수${a13}`)
-        console.log(`14가나온횟수${a14}`)
-        console.log(`15가나온횟수${a15}`)
-        console.log(`16이나온횟수${a16}`)
-        console.log(`17이나온횟수${a17}`)
-        console.log(`18이나온횟수${a18}`)
-        console.log(`19가나온횟수${a19}`)
-        console.log(`20이나온횟수${a20}`)
-        console.log(`21이나온횟수${a21}`)
-        console.log(`22가나온횟수${a22}`)
-        console.log(`23이나온횟수${a23}`)
-        console.log(`24가나온횟수${a24}`)
-        console.log(`25가나온횟수${a25}`)
-        console.log(`26이나온횟수${a26}`)
-        console.log(`27이나온횟수${a27}`)
-        console.log(`28이나온횟수${a28}`)
-        console.log(`29가나온횟수${a29}`)
-        console.log(`30이나온횟수${a30}`)
-        console.log(`31이나온횟수${a31}`)
-        console.log(`32가나온횟수${a32}`)
-        console.log(`33이나온횟수${a33}`)
-        console.log(`34가나온횟수${a34}`)
-        console.log(`35가나온횟수${a35}`)
-        console.log(`36이나온횟수${a36}`)
-        console.log(`37이나온횟수${a37}`)
-        console.log(`38가나온횟수${a38}`)
-        console.log(`39이나온횟수${a39}`)
-        console.log(`40이나온횟수${a40}`)
-        console.log(`41이나온횟수${a41}`)
-        console.log(`42가나온횟수${a42}`)
-        console.log(`43이나온횟수${a43}`)
-        console.log(`44가나온횟수${a44}`)
-        console.log(`45가나온횟수${a45}`)
-       
-        
-
-
-        let list=``
-            list+=`<table>`
-                 list+=  ` <tr>`
-                 list+=  ` <td class="a" colspan="4">로또</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <tr class="b">`
-                 list+=  ` <td>추첨번호</td><td>나온횟수</td><td>추첨번호</td><td>나온횟수</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <td>1번</td>`
-                 list+=  ` <td>${a1}</td>`
-                 list+=  ` <td>2번</td>`
-                 list+=  ` <td>${a2}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>3번</td>`
-                 list+=  ` <td>${a3}</td>`
-                 list+=  ` <td>4번</td>`
-                 list+=  ` <td>${a4}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>5번</td>`
-                 list+=  ` <td>${a5}</td>`
-                 list+=  ` <td>6번</td>`
-                 list+=  ` <td>${a6}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>7번</td>`
-                 list+=  ` <td>${a7}</td>`
-                 list+=  ` <td>8번</td>`
-                 list+=  ` <td>${a8}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>9번</td>`
-                 list+=  ` <td>${a9}</td>`
-                 list+=  ` <td>10번</td>`
-                 list+=  ` <td>${a10}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>11번</td>`
-                 list+=  ` <td>${a11}</td>`
-                 list+=  ` <td>12번</td>`
-                 list+=  ` <td>${a12}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>13번</td>`
-                 list+=  ` <td>${a13}</td>`
-                 list+=  ` <td>14번</td>`
-                 list+=  ` <td>${a14}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>15번</td>`
-                 list+=  ` <td>${a15}</td>`
-                 list+=  ` <td>16번</td>`
-                 list+=  ` <td>${a16}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>17번</td>`
-                 list+=  ` <td>${a17}</td>`
-                 list+=  ` <td>18번</td>`
-                 list+=  ` <td>${a18}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>19번</td>`
-                 list+=  ` <td>${a19}</td>`
-                 list+=  ` <td>20번</td>`
-                 list+=  ` <td>${a20}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>21번</td>`
-                 list+=  ` <td>${a21}</td>`
-                 list+=  ` <td>22번</td>`
-                 list+=  ` <td>${a22}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>23번</td>`
-                 list+=  ` <td>${a23}</td>`
-                 list+=  ` <td>24번</td>`
-                 list+=  ` <td>${a24}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>25번</td>`
-                 list+=  ` <td>${a25}</td>`
-                 list+=  ` <td>26번</td>`
-                 list+=  ` <td>${a26}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>27번</td>`
-                 list+=  ` <td>${a27}</td>`
-                 list+=  ` <td>28번</td>`
-                 list+=  ` <td>${a28}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>29번</td>`
-                 list+=  ` <td>${a29}</td>`
-                 list+=  ` <td>30번</td>`
-                 list+=  ` <td>${a30}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>31번</td>`
-                 list+=  ` <td>${a31}</td>`
-                 list+=  ` <td>32번</td>`
-                 list+=  ` <td>${a32}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>33번</td>`
-                 list+=  ` <td>${a33}</td>`
-                 list+=  ` <td>34번</td>`
-                 list+=  ` <td>${a34}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>35번</td>`
-                 list+=  ` <td>${a35}</td>`
-                 list+=  ` <td>36번</td>`
-                 list+=  ` <td>${a36}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>37번</td>`
-                 list+=  ` <td>${a37}</td>`
-                 list+=  ` <td>38번</td>`
-                 list+=  ` <td>${a38}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>39번</td>`
-                 list+=  ` <td>${a39}</td>`
-                 list+=  ` <td>40번</td>`
-                 list+=  ` <td>${a40}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>41번</td>`
-                 list+=  ` <td>${a41}</td>`
-                 list+=  ` <td>42번</td>`
-                 list+=  ` <td>${a42}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>43번</td>`
-                 list+=  ` <td>${a43}</td>`
-                 list+=  ` <td>44번</td>`
-                 list+=  ` <td>${a44}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` <tr>`
-                 list+=  ` <td>45번</td>`
-                 list+=  ` <td>${a45}</td>`
-                 list+=  ` <td>총</td>`
-                 list+=  ` <td>${a1+a2+a3+a4+a5+a6+a7+a8+a9+a10+a11+a12+a13+a14+a15+a16
-        +a17+a18+a19+a20+a21+a22+a23+a24+a25+a26+a27+a28+a29+a30+
-        a31+a32+a33+a34+a35+a36+a37+a38+a39+a40+a41+a42+a43+a44+a45}</td>`
-                 list+=  ` </tr>`
-                 list+=  ` </table>`
-                 document.write(list)
     </script>
 </head>
 <body>
-   
+    
 </body>
 </html>
