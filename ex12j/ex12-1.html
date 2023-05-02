@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //매개변수 4개를 넣었을때
+        //그중 가장 작은 수를 리턴하여라.
+       function sum(a,b,c,d){
+           let total = [a,b,c,d]
+           for(;;){
+            if(total[0]<total[1] && total[1]<total[2] && total[2]<total[3])break;
+            if(total[0]>total[1]){[total[0], total[1], total[2], total[3]] = [total[1], total[0], total[2], total[3]]}
+            if(total[1]>total[2]){[total[0], total[1], total[2], total[3]] = [total[0], total[2], total[1], total[3]]}
+            if(total[2]>total[3]){[total[0], total[1], total[2], total[3]] = [total[0], total[1], total[3], total[2]]}
+        }
+        return total[0]
+        }
+        console.log(sum(22,5,3,102))
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
