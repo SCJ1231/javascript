@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속도테스트</title>
+    <script>
+        const arr = []
+        for(let i=0; i<100000; i++)arr.push(i)
+
+        console.time('for - length')
+        const cnt = arr.length
+        for(let i=cnt;0;i--)
+        console.timeEnd('for - length')
+
+
+
+        // console.time('for - 10000')
+        // for(let i=0;i<10000;i++)
+        // console.timeEnd('for - 10000')
+
+        // console.time('let : for - length - start')
+        // for(let i=0;i<10000;i++)
+        // console.timeEnd('let : for - length - End')
+
+
+        console.time('for-in')
+        for(let index in arr){}
+        console.timeEnd('for-in')
+
+        console.time('for-of')
+        for(let item in arr){}
+        console.timeEnd('for-of')
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

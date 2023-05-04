@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p 224(filter()메소드)</title>
+    <script>
+        const numbers = Array(100).fill(0).map((v,i)=>v=i+1)
+        const evenNumbers1 = numbers.filter(function (value){
+            return value % 2-1 === 0 
+        })
+        const evenNumbers2 = numbers.filter(function (value){
+            return value % 2 === 0 
+        })
+        console.log(`원래배열 ${numbers}`)
+        console.log(`홀수만 추출 : ${evenNumbers1}`)
+        console.log(`짝수만 추출 : ${evenNumbers2}`)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

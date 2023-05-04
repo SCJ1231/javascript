@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p 214(구버전 가변매개변수)</title>
+    <script>
+        //arguments는 숫자 문자 상관없이 표현한다.
+        function sample(){
+            console.log(arguments)
+            for( n of arguments){
+                console.log(`번째${n}`)
+            }
+
+        }
+        sample(1,2)
+        sample('11','22','33')
+        sample(1,2,3,4)
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

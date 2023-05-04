@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map()사용</title>
+    <script>
+        let arr1 = [1,2,3,4,5,6]   // 덮어쓰기위해 const 말고 let 을 쓴다.
+        console.log(arr1)
+       arr1 =  arr1.map(function(v){    //자기 자신한테 덮어썻다.
+            return v=v-1
+        })
+        console.log(arr1)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
