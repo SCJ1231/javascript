@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+        }
+        .b{
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+        }
+       
+
+    </style>
+    <script>
+        //붉은색 원(켜져있고)이 1초 
+        // 흰색 원(꺼져있는) 0.5초
+        //가 10회 반복되는 램프를 표현한 페이지를 만들어라.
+        const red = (`<div class="a"></div><br><br><br>`)
+        const white = (`<div class="b"></div>`)
+         let ct = 0;
+         let tid = setInterval(()=>document.close, document.write(red),1*1000)
+                    setTimeout(()=>{
+                    clearInterval(tid)
+                    document.write(white)    
+                })
+            
+        
+        
+        
+
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>
