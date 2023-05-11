@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>p 231 (자바스크립트 충돌 해결)</title>
     <script>
-        let pi = 3.14
-        console.log(`1파이 값은 ${pi}입니다.`)
-        {
-            let pi = 3.141592
-            console.log(`2파이 값은 ${pi}입니다.`)
-        }
-            console.log(`3파이 값은 ${pi}입니다.`)
-        
-        function sample(){
-            let pi = 3.141592
-            console.log(`4파이 값은 ${pi}입니다.`)
-        }
-        sample()
-        console.log(`5파이 값은 ${pi}입니다.`)
-        // 중괄호를 이용해서 구분 짓거나 함수로 지정해서 사용한다.
+      let pi = 3.14;
+      console.log(`1파이 값은 ${pi}입니다.`);
+      {
+        let pi = 3.141592;
+        console.log(`2파이 값은 ${pi}입니다.`);
+      }
+      console.log(`3파이 값은 ${pi}입니다.`);
 
-
-
-        </script>
-
-</head>
-<body>
-    
-</body>
+      function sample() {
+        let pi = 3.141592;
+        console.log(`4파이 값은 ${pi}입니다.`);
+      }
+      sample();
+      console.log(`5파이 값은 ${pi}입니다.`);
+      // 중괄호를 이용해서 구분 짓거나 함수로 지정해서 사용한다.
+    </script>
+  </head>
+  <body></body>
 </html>

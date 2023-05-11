@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프로토타입 (문자열 메소드)</title>
+    <script>
+      String.prototype.ck = function (data) {
+        return this.indexOf(data) >= 0 // -> 삼항연산자
+          ? `${this.indexOf(data) + 1} 번째 있어요^^`
+          : "없네요ㅠㅠ";
+      };
+
+      const str = "안녕하세요";
+      console.log(str.ck("하세")); // ~번째 있어요
+      console.log(str.ck("몰라")); // 없네요
+
+      Array.prototype.contain = function (data) {
+        return this.indexOf(data) >= 0;
+      };
+      const b = [273, 32, 103, 57, 52];
+      console.log("273 in [273,32,103,57,52]:", b.contain(273)); // true
+      console.log("0 in [273,32,103,57,52]:", b.contain(0)); // false
+    </script>
+  </head>
+  <body></body>
+</html>

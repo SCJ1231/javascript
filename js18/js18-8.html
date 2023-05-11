@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //objet로 dog를 만들어라
+        //name
+        //age
+        //kind
+        //eat()
+        //play()
+        //wow()
+        //단 this 활용하고 메소드에 매개변수 활용할것
+
+
+        const dog = {
+            name: '장군이',
+            age: 12,
+            kind: '말티즈',
+            eat:function(eat='냠냠'){
+                console.log(`${this.name}가 밥을 ${eat}먹습니다.`)
+            },
+            play:function(play='신나게'){
+
+            },
+            wow:function(wow='왈왈'){
+                console.log()
+            }
+            
+        }
+        console.log(dog.eat())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
