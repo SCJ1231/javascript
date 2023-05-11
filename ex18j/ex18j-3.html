@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호이스팅3</title>
+    <!-- <script>
+        /* 호이스팅은 변수나 함수의 선언이 코드 퇴상단으로 끌어 올려지는 현상 */
+        var name = '글로벌 변수'
+        function callName(){
+            //var name = '로컬변수'; -> 선언을 해서 아래에 있는 name 이 끌어올려진다.
+            console.log(name);
+            var name = '로컬 변수'  //호이스팅이 되어 올라간다.
+        }
+        callName()
+
+    </script> -->
+    <script>
+        var name = '글로벌 변수'
+        function callName(){
+            console.log(name);
+            name = '로컬 변수'  //선언을 하지 않아서 name이 올라가지 않고 '글로벌 변수'의 name이 함수에 들어간다.
+        }
+        callName()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

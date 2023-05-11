@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p 249(메소드 내부의 this 키워드 사용)</title>
+    <script>
+        const cat = {
+            name: 'kitty',
+            sound:'냐옹',
+            age: 3,
+            짖어: '냥냐홍~',
+            eat:function(meow='냐'){   //->함수의 매개변수 사용
+                console.log(`${cat.name}는 ${meow} 하며 밥을 먹습니다.(cat)`)
+                console.log(`${this.name}는 ${this.sound} 하며 밥을 먹습니다.(this)`)
+                //고양이 obj 에게 짖어라고 하며 'kitty는 냥냐홍~ 하고 울어요~' 하는 메소드 추가해주기
+                console.log(`${this.name}는 ${this.짖어}하고 울어요~`)
+            }
+        }
+        console.log(cat.eat())
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
