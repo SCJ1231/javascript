@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p 312(querySelector()메소드)</title>
+    <style>
+        h1{
+            background-color: yellow;  
+        }
+    </style>
+    <script>
+        //addEventListner : 이벤트 리스너
+        //querySeletor : 쿼리셀렉터 (단독)
+        //querySeletorAll : 쿼리셀렉터 (유사배열) 배열처럼 보이는 유사배열
+        //innerHTML : HTML 형식 실행
+        //textContent : 텍스트 내용 그대로 실행
+
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const header = document.querySelector('h1')
+            header.textContent = '누굴까?'
+            header.style.color = 'red'
+            header.style.backgroundColor = 'yellow'
+            header.style.paddingTop = '30px'   //뒤에 '-' 쓰던걸 대문자로 표시해준다.
+            header.style.paddingBottom = '30px'
+            header.style.fontSize = '100px'
+            header.style.display = 'inline'
+            header.style.textAlign = 'center'
+            console.log(header)
+            
+        })
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <!-- <h1 style="color:blue">누굴까?</h1> -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>p 293(기본 속성 지정하기)</title>
+    <script>
+      const objet = {
+        name: "혼자 공부하는 파이썬",
+        price: 18000,
+        publisher: "한빛미디어",
+      };
+
+      objet.name = objet.name !== undefined ? objet.name : "제목미정";
+      objet.author = objet.author !== undefined ? objet.author : "저자 미상";
+
+      console.log(JSON.stringify(objet, null, 2));
+    </script>
+  </head>
+  <body></body>
+</html>
