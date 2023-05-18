@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //input으로 숫자(달러)를 입력받아서 (ex. 3달러)
+        //환전 버튼을 클릭하면 (x1300)
+        //원화로 변환해서 보여줘라. (ex. 3600원)
+        document.addEventListener('DOMContentLoaded', () => {
+            const input = document.querySelector('input')
+            const button = document.querySelector('button')
+            const p = document.querySelector('p')
+
+            button.addEventListener('click', (event)=> {
+                const dollar = Number(input.value)
+                if (isNaN(dollar)) {
+                    return
+                }
+                const won = dollar * 1300
+                p.textContent = `${won}원`
+                
+            })
+        })
+    </script>
+</head>
+<body>
+    <label for="test">금액을 입력하세요.</label><hr>
+    <input type="text" id="test"> 달러
+    <button>환전</button>
+    <p></p>
+</body>
+</html>
