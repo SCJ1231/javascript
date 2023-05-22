@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p 340 (구글 단위 변환 프로그램 연습)</title>
+    <style>
+        .container{
+            border: 1px solid black;
+            width: 800px;
+            height: 150px;
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            let = 현재값
+            let 변환상수 = 10
+
+            const selet = document.querySelector('select')
+            const input = document.querySelector('input')
+            const span = document.querySelector('span')
+
+            const calculate = () => {
+                span.textContent = (현재값 * 변환상수).toFixed(2)
+            }
+
+            select.addEventListener('change', (event) => {
+                const options = event.currentTarget.options
+                const index = event
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+    <input type="text">
+    <select>
+        <option value="">킬로미터</option>
+        <option value="">미터</option>
+        <option value="">센티미터</option>
+        </select>
+    <span>=</span>
+    <input type="text">
+    <select>
+        <option value="">킬로미터</option>
+        <option value="">미터</option>
+        <option value="">센티미터</option>
+    </select>
+    <span></span>
+    </div>
+</body>
+</html>

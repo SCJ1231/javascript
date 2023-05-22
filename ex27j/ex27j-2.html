@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p 352 (할일목록 연습)</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            const h1 = document.createElement('h1')
+            const input = document.createElement('input')
+            const button = document.createElement('button')
+            h1.innerHTML = "할 일 목록"
+            button.textContent = "추가하기" 
+            document.body.append(h1,input,button)
+
+            button.addEventListener('click', (event) => {
+                const checkbox = document.createElement('input')
+                const button = document.createElement('button')
+                const span = document.createElement('span')
+                const br = document.createElement('br')
+                checkbox.setAttribute('type','checkbox')
+                button.textContent = '제거하기' 
+                span.textContent = input.value
+                document.body.append(checkbox, span, button, br)
+            })
+            
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
