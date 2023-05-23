@@ -5,27 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>p 352 (할일목록 연습)</title>
+    <style>
+        html, body {
+            background-color: lightskyblue
+        }
+        h1{
+            color:rgb(149, 63, 224);
+            font-style:italic;
+        }
+        input{
+            border-radius: 20px;
+        }
+        button{
+            background-color: gold;
+            border-radius: 20px;
+        }
+    </style>
     <script>
         document.addEventListener('DOMContentLoaded', ()=>{
             const h1 = document.createElement('h1')
             const input = document.createElement('input')
-            const button = document.createElement('button')
-            h1.innerHTML = "할 일 목록"
-            button.textContent = "추가하기" 
-            document.body.append(h1,input,button)
+            const button1 = document.createElement('button')
+            const button2 = document.createElement('button')
+            const br = document.createElement('br')
 
-            button.addEventListener('click', (event) => {
-                const checkbox = document.createElement('input')
-                const button = document.createElement('button')
-                const span = document.createElement('span')
-                const br = document.createElement('br')
-                checkbox.setAttribute('type','checkbox')
-                button.textContent = '제거하기' 
-                span.textContent = input.value
-                document.body.append(checkbox, span, button, br)
-            })
+       
+                h1.innerHTML = "할 일 목록"
+                input.style.height = '30px'
+                input.style.marginRight = '10px'
+                button1.textContent = "추가하기" 
+                button1.style.marginRight = '10px'
+                button2.textContent = "제거하기" 
+                document.body.append(h1,input,button1,button2,br)
             
-        })
+                button1.addEventListener('click', (event) => {
+                    const checkbox = document.createElement('input')
+                    const button = document.createElement('button')
+                    const button2 = document.createElement('button')
+                    const span = document.createElement('span')
+                    const br = document.createElement('br')
+                
+                    checkbox.setAttribute('type','checkbox')
+                    button2.textContent = '제거하기'
+                    span.textContent = input.value
+                    document.body.append(checkbox, span, button2, br)
+                })
+            
+                button2.addEventLiostener('click', (event) => {
+                    document.body.removeChild(checkbox)
+                
+                    
+                    
+                
+                })
+            
+            })
     </script>
 </head>
 <body>
