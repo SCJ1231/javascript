@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set 중복제거</title>
+    <script>
+        const s1 = new Set()
+        s1.add(11)
+        s1.add(22)
+        s1.add(11) //추가안됨
+        console.log(s1)
+        console.log("s1 size:", s1.size) // length 같이 길이를 반환
+        console.log('s1 value:', s1)
+
+
+        // const arr = [1,2,3,4,5,6,7,7,6,5,4,3,2,1,0]
+        const arr = ["안", "녕", "하", "세", "요"]   //  문자도 가능
+        const s2 = new Set(arr)
+        console.log('arr:', arr)
+        console.log('s2 size:', s2.size)
+        console.log('s2 value:', s2, typeof s2)
+
+
+        const result = s2.has('소')
+        console.log(result)
+        const array = new Array(s2)
+        console.log(array)
+        console.log(Array.isArray(array))
+
+        //clear // 모두삭제
+        //delete // 해당 값 삭제
+
+        delete arr[1]
+        delete arr[3]
+        console.log(arr) // '녕'과 '세' 만 삭제
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

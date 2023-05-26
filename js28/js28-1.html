@@ -5,28 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>p 352 (할 일 목록)</title>
+   
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
         .check-ok {
             text-decoration: line-through;
-            color: gray;
+            color: rgb(219, 216, 225);
         }
+        html {
+            display: flex;
+        }
+        body {
+            /* background-image: url(https://cdn.pixabay.com/photo/2020/09/20/03/49/board-5585922_1280.png); */
+            background-image: url(./img/board.png);
+            background-size : cover;
+            background-repeat:no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            font-family: 'Gamja Flower', cursive;
+            font-size: 200%;
+            
+            
+        }
+        
+        h1 {
+            color: rgb(219, 216, 225);
+            margin-top: 100px;
+           
+        }
+        input {
+            border: 0px;
+            border-bottom: 2px solid rgb(219, 216, 225);
+            background-color: #528863;
+            width: 500px;
+            padding-left: 15px;
+            text-align: center;
+            font-family: 'Gamja Flower', cursive;
+            font-size: 100%;
+        }
+        button {
+            border: 0px;
+            border-radius: 10px;
+            background-color: #528863;
+            color: rgb(219, 216, 225);
+            font-family: 'Gamja Flower', cursive;
+            font-size: 80%;
+        }
+        input[type="checkbox"] {
+            width: 50px;
+        }
+        div1 {
+            width: 100%;
+        }
+        hr {
+           width: 400px; 
+        }
+       
+        
     </style>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', ()=>{
             /* DOM 구성 */
+            const br = document.createElement('br')
             const h1 =  document.createElement('h1')
             const input =  document.createElement('input')
             const button =  document.createElement('button')
             const btn = document.createElement('button')
+            const div1 = document.createElement('div1')
+            const hr = document.createElement('hr')
+            const p = document.createElement('p')
 
-            document.body.append(h1, input, button, btn)
-            h1.innerHTML = "할 일 목록"
+            document.body.append( h1, div1, br, hr)
+            div1.append( input,br, button, btn)
+
+        
+            h1.innerHTML = "☆☆ 할 일 목록 "
+            new TypeIt(h1)
+            .go() 
+
             input.setAttribute('id','todo')
             input.style.height = '30px'
-            input.style.marginRight = '10px'
-            button.innerHTML = "추가하기"
-            button.style.marginRight = '10px'
-            btn.innerHTML = '삭제하기'
+            input.style.marginBottom = '20px'
+            button.innerHTML = "추가"
+            button.style.marginRight = '20px'
+            btn.innerHTML = '모두 지우기'
+
+            let arr = localStorage.getItem("arr1")?.split(",") ?? [];
+            let vin = "";
+            p2.innerHTML = arr
+
 
             /* 입력한 부분 변수로 받기 */
             let content = ''
@@ -46,7 +116,8 @@
 
                     document.body.append(div)
                     div.append(check, span, inbutton)
-                    inbutton.innerHTML = '삭제하기'
+                    inbutton.innerHTML = '지우기'
+                    inbutton.style.display = 'none'
                     // check.setAttribute('class', ct++)  -> 몇번째의 순서인지 번호를 매겨 알려준다.
                     // check.className = ct++
                     check.setAttribute('type', 'checkbox')
@@ -73,18 +144,27 @@
                     /* 체크 방법2 */
                     check.addEventListener('change', (e) => {
                         if (e.currentTarget.checked) {
-                            span.className = 'check-ok'  //  -> css 를 줘서 줄을 그어줄 수 있다.
+                            span.className = 'check-ok'  //  -> css 를 줘서 줄을 그어줄 수 있다.                            
+                            inbutton.style.display = 'inline-block'
                         } 
-                        else {
+                        else  {
                             span.className = 'check-no'
+                            inbutton.style.display = 'none'
+                            
                         }
                     })
-
+                    
                     inbutton.addEventListener('click', (e) => {
-                        document.body.removeChild(div)
+                            document.body.removeChild(div)    
                     })
 
-                    
+                    btn.addEventListener('click', (e) => {
+                            document.body.removeChild(div) 
+                    })
+
+
+
+
                 }
             })
         })
@@ -92,6 +172,6 @@
 
 </head>
 <body>
-    
+
 </body>
 </html>
