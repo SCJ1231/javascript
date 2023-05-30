@@ -17,7 +17,7 @@
         }
         body {
             /* background-image: url(https://cdn.pixabay.com/photo/2020/09/20/03/49/board-5585922_1280.png); */
-            background-image: url(./img/board.png);
+            background-image: url(./img/board2.png);
             background-size : cover;
             background-repeat:no-repeat;
             background-position: center;
@@ -79,7 +79,7 @@
             const p = document.createElement('p')
 
             document.body.append( h1, div1, br, hr)
-            div1.append( input,br, button, btn)
+            div1.append( input, br, button, btn)
 
         
             h1.innerHTML = "☆☆ 할 일 목록 "
@@ -93,9 +93,6 @@
             button.style.marginRight = '20px'
             btn.innerHTML = '모두 지우기'
 
-            let arr = localStorage.getItem("arr1")?.split(",") ?? [];
-            let vin = "";
-            p2.innerHTML = arr
 
 
             /* 입력한 부분 변수로 받기 */
@@ -124,7 +121,7 @@
                     span.innerHTML = content
                     input.value = ''  // -> 추가한글을 칸에서 지워버린다.
                     content = ''  // -> 한번 추가한 글을 더이상 추가 시키지 않는다. 글은 남아있다
-
+                    
 
                     /* 체크 방법1 */
                     // check.addEventListener('change', (e) => {
@@ -161,11 +158,18 @@
                     btn.addEventListener('click', (e) => {
                             document.body.removeChild(div) 
                     })
-
-
-
-
                 }
+            })
+            const savedValue = localStorage.getItem('input')
+            
+            if (savedValue) {
+                input.value = savedValue
+               
+            }
+
+            input.addEventListener('keyup', (event) => {
+                const value = event.currentTarget.value
+                localStorage.setItem('input', value)
             })
         })
     </script>
