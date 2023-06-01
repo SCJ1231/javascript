@@ -160,10 +160,12 @@
                     })
                 }
             })
+            let arr = [{}]
             const savedValue = localStorage.getItem('input')
-            
             if (savedValue) {
                 input.value = savedValue
+                arr.push(input)
+                
                
             }
 
@@ -172,6 +174,7 @@
                 localStorage.setItem('input', value)
             })
         })
+        
     </script>
 
 </head>
