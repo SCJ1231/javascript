@@ -1,78 +1,69 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-     div{
-      background-color: brown;
+      body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+      
+      }
 
-     }
+      .content{
+        transition: 1s;
+      }
+
+      #aaa1 {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: black;
+        color: white;
+        height: 50px;
+      }
+
+      .About{
+        width: 100%;
+      }
+
+      .Products{
+        width: 100%;
+      }
+
+      .Technology {
+        width: 100%;
+      }
+
+      .Downloads {
+        width: 100%;
+      }
+
+      .Etc {
+        width: 100%;
+      }
+      
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', ()=>{
-            const div_1 = document.createElement('div') 
-            const h1_1 = document.createElement('h1')
-            const p_1 = document.createElement('p')
 
-            div_1.textContent = 'About'
-            h1_1.innerHTML = 'About'
-            p_1.innerHTML = 'Custom Software Development Company'
-            div_1.append(h1_1, p_1)
-            
+  </head>
+  <body>
+    <div id="About" class="content">
+      <h1>About</h1>
+      <p>Custom Software Development Company</p>
+    </div>
+    <div id="aaa1">
+      <div class="About">About</div>
+      <div class="Products">Products</div>
+      <div class="Technology">Technology</div>
+      <div class="Downloads">Downloads</div>
+      <div class="Etc">Etc</div>
+    </div>
 
-            const div_2 = document.createElement('div')
-            const h1_2 = document.createElement('h1')
-            const p_2 = document.createElement('p')
-
-            div_2.textContent = 'Productst'
-            h1_2.innerHTML = 'Products'
-            p_2.innerHTML = 'Building tailored software to address critical needs of globl enterprises'
-            div_2.append(h1_2, p_2)                  
-            
-
-            const div_3 = document.createElement('div')
-            const h1_3 = document.createElement('h1')
-            const p_3 = document.createElement('p')
-
-            div_3.textContent = 'Technology'
-            h1_3.innerHTML = 'Technology'
-            p_3.innerHTML = 'Machine Learning, Artificial Intelligent, Cloud Platform'
-            div_3.append(h1_3, p_3)
-            
-
-            const div_4 = document.createElement('div')
-            const h1_4 = document.createElement('h1')
-            const p_4 = document.createElement('p')
-
-            div_4.textContent = 'Downloads'
-            h1_4.innerHTML = 'Downloads'
-            p_4.innerHTML = 'You can download a free 10 days trial'
-            div_4.append(h1_4, p_4)
-            
-
-            const div_5 = document.createElement('div')
-            const h1_5 = document.createElement('h1')
-            const p_5 = document.createElement('p')
-
-            div_5.textContent = 'Etc'
-            h1_5.innerHTML = 'Etc'
-            p_5.innerHTML = 'Everything is fine.'
-            div_5.append(h1_5, p_5)
-            document.body.append(div_1,div_2,div_3,div_4,div_5)
-
-        })
-    </script>
-</head>
-<body>
-    <!-- <div id="About" class="content">
-        <h1>About</h1>
-        <p>Custom Software Development Company</p>
-      </div>
-  
-      <div id="Products" class="content">
+    <!-- <div id="Products" class="content">
         <h1>Products</h1>
         <p>
           Building tailored software to address critical needs of global
@@ -94,5 +85,61 @@
         <h1>Etc</h1>
         <p>Everything is fine.</p>
       </div> -->
-</body>
+
+      <script>
+        const add = [1,2,3,4]
+  
+        /*
+            <div id="aaa1">
+              <div class="About">
+                  About -> sdfsdfsdfsdfsfd
+                </div>
+              <div class="aa">Products</div>
+              <div class="aa">Technology</div>
+              <div class="aa">Downloads</div>
+              <div class="aa">Etc</div>
+           </div>
+        */
+  
+       const About = document.querySelector('.About')
+       const h1 = document.querySelector('h1')
+       const p = document.querySelector('p')
+       const div = document.querySelector('div')
+       About.addEventListener('click', ()=>{
+        h1.innerHTML = 'sdfsdfsdfsdfsdffsdfsdf'
+        p.innerHTML = 'sdfsdfsdffffeeerererer'
+        div.style.backgroundColor = 'blue'
+       })
+
+       const Products = document.querySelector('.Products')
+       Products.addEventListener('click', ()=>{
+        h1.innerHTML = 'qweqweqweqweqweqweqweqwe'
+        p.innerHTML = 'zxczxczxczxczxczxczxc'
+        div.style.backgroundColor = 'gold'
+       })
+
+       const Technology = document.querySelector('.Technology')
+       Technology.addEventListener('click', ()=>{
+        h1.innerHTML = 'fffffffdffffffffffff'
+        p,innerHTML = 'sdfsdfsdf222626dsfsdfsdf'
+        div.style.backgroundColor = 'red'
+       })
+
+       const Downloads = document.querySelector('Downloads')
+       Downloads.addEventListener('click', ()=>{
+        h1.innerHTML = 'klsjdfklsjdklfjskdlfjslkdfj'
+        p.innerHTML = 'sdf153153s1df351s3d5f1s35df13s5f'
+        div.backgroundColor = 'green'
+       })
+
+
+
+
+      
+           
+  
+  
+  
+      </script>
+  </body>
 </html>
