@@ -103,78 +103,107 @@
 
             /* 동작 1단계 */
             ct = 0
-            button.addEventListener('click', (e)=>{
-                if(content) {
-                    ct++
-                    const div = document.createElement('div')
-                    const check = document.createElement('input')
-                    const span = document.createElement('span')
-                    const inbutton = document.createElement('button')
+        
+            // 할일목록을 추가하는 함수
+            function addContent() {
+                    if(content) {
+                        ct++
+                        const div = document.createElement('div')
+                        const check = document.createElement('input')
+                        const span = document.createElement('span')
+                        const inbutton = document.createElement('button')
+    
+                        document.body.append(div)
+                        div.append(check, span, inbutton)
+                        inbutton.innerHTML = '지우기'
+                        inbutton.style.display = 'none'
+                        // check.setAttribute('class', ct++)  -> 몇번째의 순서인지 번호를 매겨 알려준다.
+                        // check.className = ct++
+                        check.setAttribute('type', 'checkbox')
+                        span.innerHTML = content
+                        input.value = ''  // -> 추가한글을 칸에서 지워버린다.
+                        content = ''  // -> 한번 추가한 글을 더이상 추가 시키지 않는다. 글은 남아있다
+                        
+    
 
-                    document.body.append(div)
-                    div.append(check, span, inbutton)
-                    inbutton.innerHTML = '지우기'
-                    inbutton.style.display = 'none'
-                    // check.setAttribute('class', ct++)  -> 몇번째의 순서인지 번호를 매겨 알려준다.
-                    // check.className = ct++
-                    check.setAttribute('type', 'checkbox')
-                    span.innerHTML = content
-                    input.value = ''  // -> 추가한글을 칸에서 지워버린다.
-                    content = ''  // -> 한번 추가한 글을 더이상 추가 시키지 않는다. 글은 남아있다
-                    
-
-                    /* 체크 방법1 */
-                    // check.addEventListener('change', (e) => {
-                    //     //console.log(check)     ->    check 를 리턴한값인 e로 대체해서 적을 수 있다.
-                    //     //console.log(check.value)     ->   e로 대체해서 사용하면 e.currentTarget 을 붙여서 사용한다.
-                    //     //console.log(check.checked)
-                    //     if (e.currentTarget.checked) {
-                    //         span.style.textDecoration = 'line-through' // span말고 div를 쓸수있지만 div안에 있는 모든 글을 줄그어 버린다.
-                    //     } 
-                    //     else {
-                    //         span.style.textDecoration = 'none'
-                    //     }
-                    // })
-
-
-
-                    /* 체크 방법2 */
-                    check.addEventListener('change', (e) => {
-                        if (e.currentTarget.checked) {
-                            span.className = 'check-ok'  //  -> css 를 줘서 줄을 그어줄 수 있다.                            
-                            inbutton.style.display = 'inline-block'
-                        } 
-                        else  {
-                            span.className = 'check-no'
-                            inbutton.style.display = 'none'
-                            
-                        }
-                    })
-                    
-                    inbutton.addEventListener('click', (e) => {
-                            document.body.removeChild(div)    
-                    })
-
-                    btn.addEventListener('click', (e) => {
+                        /* 체크 방법2(줄긋는 이벤트) */
+                        check.addEventListener('change', (e) => {
+                            if (e.currentTarget.checked) {
+                                span.className = 'check-ok'  //  -> css 를 줘서 줄을 그어줄 수 있다.                            
+                                inbutton.style.display = 'inline-block'
+                            } 
+                            else  {
+                                span.className = 'check-no'
+                                inbutton.style.display = 'none'
+                                
+                            }
+                        })
+                        
+                        inbutton.addEventListener('click', (e) => {
+                                document.body.removeChild(div)    
+                        })
+    
+                        btn.addEventListener('click', (e) => {
+                            localStorage.clear();
                             document.body.removeChild(div) 
-                    })
+                        })
+                    }
                 }
-            })
-            let arr = [{}]
-            const savedValue = localStorage.getItem('input')
+
+
+            // 로컬스토리지 사용
+            const savedValue = localStorage.getItem('input');
+            let arr = [];
+
             if (savedValue) {
-                input.value = savedValue
-                arr.push(input)
-                
-               
+                arr = JSON.parse(savedValue);
             }
 
-            input.addEventListener('keyup', (event) => {
-                const value = event.currentTarget.value
-                localStorage.setItem('input', value)
+            button.addEventListener('click',(event)=>{
+                const value = input.value;  //input안에 있는 value 속성 접근
+                arr.push(value)
+                localStorage.setItem('input', JSON.stringify(arr));
+                addContent() 
+                console.log(event)
             })
+
+
+            // input 이벤트 리스너 설정
+            input.addEventListener('keyup', (event) => {
+                const value = event.currentTarget.value; // currentTarget로 자기 속성에 접근
+                if (event.key === 'Enter' && value.trim() !=='') {
+                    // 배열에 값 추가
+                    arr.push(value);
+
+                    event.currentTarget.value = ''; // 입력 후 배열을 비워준다.
+
+                    // 로컬 스토리지에 배열 저장
+                    localStorage.setItem('input', JSON.stringify(arr));
+                    addContent()
+                }
+            });
         })
         
+
+
+
+        //--------------------------------------------------------------------------
+
+                            
+    
+                        /* 체크 방법1 */
+                        // check.addEventListener('change', (e) => {
+                        //     //console.log(check)     ->    check 를 리턴한값인 e로 대체해서 적을 수 있다.
+                        //     //console.log(check.value)     ->   e로 대체해서 사용하면 e.currentTarget 을 붙여서 사용한다.
+                        //     //console.log(check.checked)
+                        //     if (e.currentTarget.checked) {
+                        //         span.style.textDecoration = 'line-through' // span말고 div를 쓸수있지만 div안에 있는 모든 글을 줄그어 버린다.
+                        //     } 
+                        //     else {
+                        //         span.style.textDecoration = 'none'
+                        //     }
+                        // })
+    
     </script>
 
 </head>
